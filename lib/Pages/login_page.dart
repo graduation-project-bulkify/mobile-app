@@ -1,5 +1,6 @@
 import 'package:bulkify/Pages/forgot_password_page.dart';
 import 'package:bulkify/Pages/register_page.dart';
+import 'package:bulkify/constants.dart';
 import 'package:bulkify/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -9,14 +10,16 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         leading: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
           child: Container(
               decoration: BoxDecoration(
                   color: Color(0xff6a7f64), shape: BoxShape.circle),
               child: IconButton(
-                  highlightColor: Color(0xFF61ae45),
+                  highlightColor: KPrimaryColor,
                   icon: Icon(
                     Icons.arrow_back,
                     color: Colors.white,
@@ -28,9 +31,7 @@ class LoginPage extends StatelessWidget {
         title: Text(
           "Log In",
           style: TextStyle(
-              color: Color(0xFF61ae45),
-              fontSize: 27,
-              fontWeight: FontWeight.bold),
+              color: KPrimaryColor, fontSize: 27, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
@@ -59,8 +60,7 @@ class LoginPage extends StatelessWidget {
               ),
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF61ae45),
-                      fixedSize: Size(354, 45)),
+                      backgroundColor: KPrimaryColor, fixedSize: Size(354, 45)),
                   onPressed: () {},
                   child: const Text(
                     'Log In',
@@ -92,8 +92,7 @@ class LoginPage extends StatelessWidget {
                     child: Text(
                       "Create one!",
                       style: TextStyle(
-                          color: Color(0xff61ae45),
-                          fontWeight: FontWeight.bold),
+                          color: KPrimaryColor, fontWeight: FontWeight.bold),
                     ),
                   ),
                 )
@@ -113,8 +112,7 @@ class LoginPage extends StatelessWidget {
                     Text(
                       "Forgot Password?",
                       style: TextStyle(
-                          color: Color(0xff61ae45),
-                          fontWeight: FontWeight.bold),
+                          color: KPrimaryColor, fontWeight: FontWeight.bold),
                     ),
                   ],
                 ),
@@ -135,7 +133,7 @@ class LoginPage extends StatelessWidget {
                   Text(
                     "Sign up with",
                     style: TextStyle(
-                        color: Color(0xff61ae45), fontWeight: FontWeight.bold),
+                        color: KPrimaryColor, fontWeight: FontWeight.bold),
                   ),
                   Expanded(
                     child: Divider(
@@ -156,8 +154,7 @@ class LoginPage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    color: Colors
-                        .grey[200], // the color must be inside BoxDecoration
+                    // the color must be inside BoxDecoration
                     border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(16),
                   ),
@@ -172,8 +169,7 @@ class LoginPage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: Colors
-                        .grey[200], // the color must be inside BoxDecoration
+                    // the color must be inside BoxDecoration
                     border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(16),
                   ),
@@ -188,8 +184,7 @@ class LoginPage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Colors
-                        .grey[200], // the color must be inside BoxDecoration
+                    // the color must be inside BoxDecoration
                     border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(16),
                   ),

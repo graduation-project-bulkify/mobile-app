@@ -1,4 +1,5 @@
 import 'package:bulkify/Pages/New_Password_page.dart';
+import 'package:bulkify/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -53,7 +54,7 @@ class _VerificationPageState extends State<VerificationPage> {
             decoration:
                 BoxDecoration(color: Color(0xff6a7f64), shape: BoxShape.circle),
             child: IconButton(
-              highlightColor: Color(0xFF61ae45),
+              highlightColor: KPrimaryColor,
               icon: Icon(
                 Icons.arrow_back,
                 color: Colors.white,
@@ -67,9 +68,7 @@ class _VerificationPageState extends State<VerificationPage> {
         title: Text(
           "Verification",
           style: TextStyle(
-              color: Color(0xFF61ae45),
-              fontSize: 27,
-              fontWeight: FontWeight.bold),
+              color: KPrimaryColor, fontSize: 27, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
@@ -108,12 +107,12 @@ class _VerificationPageState extends State<VerificationPage> {
                             focusedBorder: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(12)),
-                              borderSide: BorderSide(color: Color(0xFF61ae45)),
+                              borderSide: BorderSide(color: KPrimaryColor),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(12)),
-                              borderSide: BorderSide(color: Color(0xFF61ae45)),
+                              borderSide: BorderSide(color: KPrimaryColor),
                             ),
                           ),
                         ),
@@ -156,8 +155,7 @@ class _VerificationPageState extends State<VerificationPage> {
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF61ae45),
-                    fixedSize: Size(354, 46)),
+                    backgroundColor: KPrimaryColor, fixedSize: Size(354, 46)),
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return NewPasswordPage();

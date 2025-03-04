@@ -1,4 +1,5 @@
 import 'package:bulkify/Pages/start_page.dart';
+import 'package:bulkify/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -73,7 +74,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
           // Foreground Image
           Center(
             child: SvgPicture.asset(
-              'assets/images/splash_logo.svg',
+              KLogo,
               width: 100,
               height: 100,
             ),

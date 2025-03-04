@@ -1,5 +1,6 @@
 import 'package:bulkify/Pages/login_page.dart';
 import 'package:bulkify/Pages/register_page.dart';
+import 'package:bulkify/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -87,7 +88,7 @@ class StartPage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 10, right: 10, bottom: 5),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF61ae45),
+                    backgroundColor: KPrimaryColor,
                     fixedSize: Size(354, 45),
                   ),
                   onPressed: () {

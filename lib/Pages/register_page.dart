@@ -1,4 +1,5 @@
 import 'package:bulkify/Pages/register_page2.dart';
+import 'package:bulkify/constants.dart';
 import 'package:bulkify/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -8,14 +9,16 @@ class RegisterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         leading: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
           child: Container(
               decoration: BoxDecoration(
                   color: Color(0xff6a7f64), shape: BoxShape.circle),
               child: IconButton(
-                  highlightColor: Color(0xFF61ae45),
+                  highlightColor: KPrimaryColor,
                   icon: Icon(
                     Icons.arrow_back,
                     color: Colors.white,
@@ -67,8 +70,7 @@ class RegisterPage extends StatelessWidget {
               ),
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF61ae45),
-                      fixedSize: Size(354, 46)),
+                      backgroundColor: KPrimaryColor, fixedSize: Size(354, 46)),
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
@@ -116,8 +118,7 @@ class RegisterPage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                    color: Colors
-                        .grey[200], // the color must be inside BoxDecoration
+                    // the color must be inside BoxDecoration
                     border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(16),
                   ),
@@ -132,8 +133,7 @@ class RegisterPage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: Colors
-                        .grey[200], // the color must be inside BoxDecoration
+                    // the color must be inside BoxDecoration
                     border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(16),
                   ),
@@ -148,8 +148,7 @@ class RegisterPage extends StatelessWidget {
                 Container(
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: Colors
-                        .grey[200], // the color must be inside BoxDecoration
+                    // the color must be inside BoxDecoration
                     border: Border.all(color: Colors.white),
                     borderRadius: BorderRadius.circular(16),
                   ),

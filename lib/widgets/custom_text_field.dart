@@ -1,3 +1,4 @@
+import 'package:bulkify/constants.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -15,11 +16,11 @@ class CustomTextField extends StatelessWidget {
         hintStyle: TextStyle(color: Color(0xFF9f9f9f), fontSize: 18),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(32)),
-          borderSide: BorderSide(color: Color(0xFF61ae45)),
+          borderSide: BorderSide(color: KPrimaryColor),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.all(Radius.circular(32)),
-          borderSide: BorderSide(color: Color(0xFF61ae45)),
+          borderSide: BorderSide(color: KPrimaryColor),
         ),
       ),
     );

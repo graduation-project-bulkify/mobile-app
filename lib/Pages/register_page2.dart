@@ -1,5 +1,6 @@
 import 'package:bulkify/Pages/privacy_policy_page.dart';
 import 'package:bulkify/Pages/terms_of_services_page.dart';
+import 'package:bulkify/constants.dart';
 import 'package:bulkify/widgets/custom_text_field.dart';
 import 'package:bulkify/widgets/custom_underline_text.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class _RegisterPage2State extends State<RegisterPage2> {
               decoration: BoxDecoration(
                   color: Color(0xff6a7f64), shape: BoxShape.circle),
               child: IconButton(
-                  highlightColor: Color(0xFF61ae45),
+                  highlightColor: KPrimaryColor,
                   icon: Icon(
                     Icons.arrow_back,
                     color: Colors.white,
@@ -155,8 +156,7 @@ class _RegisterPage2State extends State<RegisterPage2> {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF61ae45),
-                      fixedSize: Size(354, 45)),
+                      backgroundColor: KPrimaryColor, fixedSize: Size(354, 45)),
                   onPressed: () {},
                   child: const Text(
                     'Log In',
