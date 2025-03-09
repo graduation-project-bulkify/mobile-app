@@ -1,5 +1,7 @@
 import 'package:bulkify/Pages/register_page2.dart';
 import 'package:bulkify/constants.dart';
+import 'package:bulkify/widgets/custom_divider.dart';
+import 'package:bulkify/widgets/custom_socialMedia_registring.dart';
 import 'package:bulkify/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -64,10 +66,7 @@ class RegisterPage extends StatelessWidget {
               child: CustomTextField(hintText: 'Confirm Password'),
             ),
             Padding(
-              padding: const EdgeInsets.only(
-                left: 20,
-                right: 20,
-              ),
+              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 5),
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       backgroundColor: KPrimaryColor, fixedSize: Size(354, 46)),
@@ -82,80 +81,33 @@ class RegisterPage extends StatelessWidget {
                     style: TextStyle(fontSize: 19, color: Colors.white),
                   )),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 13),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Expanded(
-                    child: Divider(
-                      indent: 20.0,
-                      endIndent: 10.0,
-                      thickness: 1,
-                    ),
-                  ),
-                  Text(
-                    "Sign up with",
-                    style: TextStyle(
-                        color: Color(0xff61ae45), fontWeight: FontWeight.bold),
-                  ),
-                  Expanded(
-                    child: Divider(
-                      indent: 10.0,
-                      endIndent: 20.0,
-                      thickness: 1,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            CustomDivider(),
             SizedBox(
               height: 15,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  padding: EdgeInsets.all(15),
-                  decoration: BoxDecoration(
-                    // the color must be inside BoxDecoration
-                    border: Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Image.asset(
-                    'assets/images/apple.png',
-                    height: 41,
-                  ),
+                CustomSocialmediaRegistring(
+                  containerPadding: 15,
+                  imageHeight: 41,
+                  imagePath: 'assets/images/apple.png',
                 ),
                 SizedBox(
                   width: 15,
                 ),
-                Container(
-                  padding: EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    // the color must be inside BoxDecoration
-                    border: Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Image.asset(
-                    'assets/images/google.png',
-                    height: 40,
-                  ),
+                CustomSocialmediaRegistring(
+                  containerPadding: 16,
+                  imageHeight: 40,
+                  imagePath: 'assets/images/google.png',
                 ),
                 SizedBox(
                   width: 15,
                 ),
-                Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    // the color must be inside BoxDecoration
-                    border: Border.all(color: Colors.white),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Image.asset(
-                    'assets/images/facebook3.png',
-                    width: 53,
-                  ),
+                CustomSocialmediaRegistring(
+                  containerPadding: 10,
+                  imageHeight: 53,
+                  imagePath: 'assets/images/facebook3.png',
                 ),
               ],
             )

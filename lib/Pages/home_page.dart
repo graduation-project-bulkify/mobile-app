@@ -1,4 +1,8 @@
 import 'package:bulkify/constants.dart';
+import 'package:bulkify/widgets/custom_card.dart';
+import 'package:bulkify/widgets/custom_card2.dart';
+import 'package:bulkify/widgets/custom_category_card.dart';
+import 'package:bulkify/widgets/custom_home_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -53,7 +57,80 @@ class HomePage extends StatelessWidget {
         children: [
           Expanded(
             child: ListView(
-              children: [Text('hello')],
+              children: [
+                SvgPicture.asset(
+                  'assets/images/sale.svg',
+                ),
+                CustomHomeTexts(headLineName: 'Best Deals'),
+                Padding(
+                  padding: const EdgeInsets.only(left: 5, right: 5, top: 5),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        CustomeCard(),
+                        CustomeCard(),
+                        CustomeCard(),
+                        CustomeCard(),
+                        CustomeCard(),
+                        CustomeCard(),
+                      ],
+                    ),
+                  ),
+                ),
+                CustomHomeTexts(
+                    headLineName: 'Live Purchases in your coordeinates'),
+                Padding(
+                  padding: const EdgeInsets.only(left: 5, right: 5, top: 5),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        CustomCard2(),
+                        CustomCard2(),
+                        CustomCard2(),
+                        CustomCard2(),
+                      ],
+                    ),
+                  ),
+                ),
+                CustomHomeTexts(headLineName: 'Categories'),
+                Padding(
+                  padding: const EdgeInsets.only(left: 5, right: 5, top: 5),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CustomCategoryCard(
+                          categoryImage: 'assets/images/Personal Care.jpg',
+                          categoryName: 'Personal\nCare',
+                        ),
+                        CustomCategoryCard(
+                          categoryImage: 'assets/images/women fashion.jpg',
+                          categoryName: 'Women\nFashion',
+                        ),
+                        CustomCategoryCard(
+                          categoryImage: 'assets/images/airpods.jpg',
+                          categoryName: 'Electronics',
+                        ),
+                        CustomCategoryCard(
+                          categoryImage: 'assets/images/Laundry care.jpg',
+                          categoryName: 'Laundry\nCare',
+                        ),
+                        CustomCategoryCard(
+                          categoryImage: 'assets/images/Bedding.jpg',
+                          categoryName: 'Bedding',
+                        ),
+                        CustomCategoryCard(
+                          categoryImage: 'assets/images/Beauty.jpg',
+                          categoryName: 'Beauty',
+                        ),
+                      ],
+                    ),
+                  ),
+                )
+              ],
             ),
           ),
           Padding(
