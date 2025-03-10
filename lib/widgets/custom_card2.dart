@@ -12,7 +12,7 @@ class CustomCard2 extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            width: 150,
+            width: 160,
             height: 220,
             decoration: BoxDecoration(
               boxShadow: [

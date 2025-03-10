@@ -28,34 +28,26 @@ class NewPasswordPage extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Padding(
-            padding:
-                const EdgeInsets.only(top: 45, left: 20, right: 20, bottom: 5),
-            child: CustomTextField(hintText: 'Enter a new password'),
-          ),
-          Padding(
-            padding:
-                const EdgeInsets.only(top: 5, left: 20, right: 20, bottom: 15),
-            child: CustomTextField(hintText: 'Confirm new password'),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 20,
-              right: 20,
-            ),
-            child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: KPrimaryColor, fixedSize: Size(354, 45)),
-                onPressed: () {},
-                child: const Text(
-                  'Log In',
-                  style: TextStyle(fontSize: 19, color: Colors.white),
-                )),
-          )
-        ],
+      body: Padding(
+        padding: const EdgeInsets.only(top: 25),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            CustomTextField(hintText: 'Enter a new password', height: 52),
+            CustomTextField(hintText: 'Confirm new password', height: 52),
+            Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+              child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: KPrimaryColor, fixedSize: Size(354, 45)),
+                  onPressed: () {},
+                  child: const Text(
+                    'Log In',
+                    style: TextStyle(fontSize: 19, color: Colors.white),
+                  )),
+            )
+          ],
+        ),
       ),
     );
   }

@@ -1,8 +1,9 @@
+import 'package:bulkify/constants.dart';
 import 'package:bulkify/helper/api.dart';
-import 'package:bulkify/models/register_model.dart';
+import 'package:bulkify/models/user_model.dart';
 
 class RegisterService {
-  Future<RegisterModel> addUserService({
+  Future<UserModel> addUserService({
     required String firstName,
     required String lastName,
     required String email,
@@ -30,9 +31,9 @@ class RegisterService {
           'homeNumber': homeNumber,
           'coordinates': [coordinates.longitude, coordinates.latitude],
         },
-        url: 'https://bulkify-back-end.vercel.app/api/v1/customers/register',
+        url: '$baseUrl/api/v1/customers/register',
       );
-      return RegisterModel.fromJson(data);
+      return UserModel.fromJson(data);
     } catch (e) {
       throw Exception('Failed to register user: $e');
     }

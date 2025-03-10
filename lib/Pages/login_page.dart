@@ -39,27 +39,16 @@ class LoginPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: 25, horizontal: 80),
                 child: SvgPicture.asset('assets/images/login_image.svg')),
+            CustomTextField(hintText: 'Email', height: 52),
+            CustomTextField(hintText: 'Password', height: 52),
             Padding(
-              padding:
-                  const EdgeInsets.only(top: 6, left: 20, right: 20, bottom: 5),
-              child: CustomTextField(hintText: 'Email'),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                  top: 5, left: 20, right: 20, bottom: 15),
-              child: CustomTextField(hintText: 'Password'),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 20,
-                right: 20,
-              ),
+              padding: const EdgeInsets.only(left: 20, right: 20, top: 0),
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       backgroundColor: KPrimaryColor, fixedSize: Size(354, 45)),
@@ -129,24 +118,33 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomSocialmediaRegistring(
-                  containerPadding: 15,
-                  imageHeight: 41,
+                  top: 6,
+                  bottom: 0,
+                  left: 15,
+                  right: 15,
+                  imageHeight: 46,
                   imagePath: 'assets/images/apple.png',
                 ),
                 SizedBox(
                   width: 15,
                 ),
                 CustomSocialmediaRegistring(
-                  containerPadding: 16,
-                  imageHeight: 40,
+                  top: 9,
+                  bottom: 0,
+                  left: 15,
+                  right: 15,
+                  imageHeight: 44,
                   imagePath: 'assets/images/google.png',
                 ),
                 SizedBox(
                   width: 15,
                 ),
                 CustomSocialmediaRegistring(
-                  containerPadding: 10,
-                  imageHeight: 53,
+                  top: 9,
+                  bottom: 0,
+                  left: 15,
+                  right: 15,
+                  imageHeight: 45,
                   imagePath: 'assets/images/facebook3.png',
                 ),
               ],

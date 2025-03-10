@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomeCard extends StatelessWidget {
-  const CustomeCard({
+class CustomCard extends StatelessWidget {
+  const CustomCard({
     super.key,
   });
 
@@ -12,7 +12,7 @@ class CustomeCard extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            width: 150,
+            width: 160,
             height: 210,
             decoration: BoxDecoration(
               boxShadow: [
@@ -31,6 +31,7 @@ class CustomeCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // here is the location of the stars
                     Text(
                       'Generic Pro Air Pods',
                       style: TextStyle(fontSize: 10),

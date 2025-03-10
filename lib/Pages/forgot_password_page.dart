@@ -35,11 +35,7 @@ class ForgotPasswordPage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Padding(
-            padding:
-                const EdgeInsets.only(top: 45, left: 20, right: 20, bottom: 5),
-            child: CustomTextField(hintText: 'Enter your email'),
-          ),
+          CustomTextField(hintText: 'Enter your email', height: 52),
           Padding(
             padding: const EdgeInsets.all(6),
             child: RichText(

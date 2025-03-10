@@ -48,20 +48,9 @@ class _RegisterPage2State extends State<RegisterPage2> {
             SizedBox(
               height: 16,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 5),
-              child: CustomTextField(hintText: 'National ID'),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.only(top: 5, left: 20, right: 20, bottom: 5),
-              child: CustomTextField(hintText: 'Phone'),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.only(top: 5, left: 20, right: 20, bottom: 5),
-              child: CustomTextField(hintText: 'Full Address'),
-            ),
+            CustomTextField(hintText: 'National ID', height: 52),
+            CustomTextField(hintText: 'Phone', height: 52),
+            CustomTextField(hintText: 'Full Address', height: 52),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
               child: Image.asset('assets/images/🌎 Map Maker_  (Standard).png'),

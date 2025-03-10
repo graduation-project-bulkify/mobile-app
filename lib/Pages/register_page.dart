@@ -46,27 +46,30 @@ class RegisterPage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 90),
               child: SvgPicture.asset('assets/images/register_image.svg'),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 5),
-              child: CustomTextField(hintText: 'User Name'),
+            Row(
+              children: [
+                CustomTextField(
+                  hintText: 'First Name',
+                  height: 52,
+                  width: 173,
+                  left: 20,
+                  right: 3,
+                ),
+                CustomTextField(
+                  hintText: 'Last Name',
+                  height: 52,
+                  width: 173,
+                  left: 3,
+                  right: 20,
+                ),
+              ],
             ),
-            Padding(
-              padding:
-                  const EdgeInsets.only(top: 5, left: 20, right: 20, bottom: 5),
-              child: CustomTextField(hintText: 'Email'),
-            ),
-            Padding(
-              padding:
-                  const EdgeInsets.only(top: 5, left: 20, right: 20, bottom: 5),
-              child: CustomTextField(hintText: 'Password'),
-            ),
+            CustomTextField(hintText: 'Email', height: 52),
+            CustomTextField(hintText: 'Password', height: 52),
+            CustomTextField(hintText: 'Confirm Password', height: 52),
             Padding(
               padding: const EdgeInsets.only(
-                  top: 5, left: 20, right: 20, bottom: 15),
-              child: CustomTextField(hintText: 'Confirm Password'),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 5),
+                  left: 20, right: 20, bottom: 5, top: 15),
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       backgroundColor: KPrimaryColor, fixedSize: Size(354, 46)),
@@ -89,28 +92,37 @@ class RegisterPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CustomSocialmediaRegistring(
-                  containerPadding: 15,
-                  imageHeight: 41,
+                  top: 3,
+                  bottom: 0,
+                  left: 15,
+                  right: 15,
+                  imageHeight: 46,
                   imagePath: 'assets/images/apple.png',
                 ),
                 SizedBox(
                   width: 15,
                 ),
                 CustomSocialmediaRegistring(
-                  containerPadding: 16,
-                  imageHeight: 40,
+                  top: 6,
+                  bottom: 0,
+                  left: 15,
+                  right: 15,
+                  imageHeight: 44,
                   imagePath: 'assets/images/google.png',
                 ),
                 SizedBox(
                   width: 15,
                 ),
                 CustomSocialmediaRegistring(
-                  containerPadding: 10,
-                  imageHeight: 53,
+                  top: 6,
+                  bottom: 0,
+                  left: 15,
+                  right: 15,
+                  imageHeight: 45,
                   imagePath: 'assets/images/facebook3.png',
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),

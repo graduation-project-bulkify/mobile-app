@@ -50,6 +50,9 @@ class CustomCategoryCard extends StatelessWidget {
             ],
           ),
         ),
+        SizedBox(
+          height: 2,
+        ),
         Text(
           categoryName,
           style: const TextStyle(

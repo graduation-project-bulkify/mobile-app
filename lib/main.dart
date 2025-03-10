@@ -10,6 +10,6 @@ class Bulkify extends StatelessWidget {
   const Bulkify({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: HomePage());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Splash());
   }
 }

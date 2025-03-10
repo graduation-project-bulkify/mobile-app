@@ -1,6 +1,7 @@
 import 'package:bulkify/constants.dart';
 import 'package:bulkify/widgets/custom_card.dart';
 import 'package:bulkify/widgets/custom_card2.dart';
+import 'package:bulkify/widgets/custom_card_with_rating_stars.dart';
 import 'package:bulkify/widgets/custom_category_card.dart';
 import 'package:bulkify/widgets/custom_home_texts.dart';
 import 'package:flutter/material.dart';
@@ -68,12 +69,12 @@ class HomePage extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        CustomeCard(),
-                        CustomeCard(),
-                        CustomeCard(),
-                        CustomeCard(),
-                        CustomeCard(),
-                        CustomeCard(),
+                        CustomCard(),
+                        CustomCard(),
+                        CustomCard(),
+                        CustomCard(),
+                        CustomCard(),
+                        CustomCard(),
                       ],
                     ),
                   ),
@@ -129,7 +130,39 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                )
+                ),
+                CustomHomeTexts(headLineName: 'Featured Products'),
+                Padding(
+                  padding: const EdgeInsets.only(left: 5, right: 5, top: 5),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        CustomCardWithRatingStars(),
+                        CustomCardWithRatingStars(),
+                        CustomCardWithRatingStars(),
+                        CustomCardWithRatingStars(),
+                        CustomCardWithRatingStars(),
+                      ],
+                    ),
+                  ),
+                ),
+                CustomHomeTexts(headLineName: 'Frequently Bought'),
+                Padding(
+                  padding: const EdgeInsets.only(left: 5, right: 5, top: 5),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        CustomCardWithRatingStars(),
+                        CustomCardWithRatingStars(),
+                        CustomCardWithRatingStars(),
+                        CustomCardWithRatingStars(),
+                        CustomCardWithRatingStars(),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
